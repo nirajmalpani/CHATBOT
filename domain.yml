@@ -1,0 +1,86 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- user_gives_details
+- user_takes_exercises
+- user_takes_diet_chart
+- user_takes_gainweight
+- user_takes_loseweight
+- user_takes_buildmuscle
+- user_takes_personaltrainer
+- take_details
+- good_bye
+- 'good_bye:'
+responses:
+  utter_greet:
+  - buttons:
+    - payload: Diet Chart
+      title: i want to know about diet chart
+    - payload: Exercises
+      title: i want to know about the exercises
+    - payload: Personal Trainer
+      title: i want personal trainer
+    text: Hey! I am your fitness assistant! One should always stay Healthy.Which of
+      this do you want to take?
+  utter_display_plan:
+  - buttons:
+    - payload: i want to build my muscle
+      title: Build Muscle
+    - payload: i want to loss my weight
+      title: Lose Weight
+    - payload: i want to gain my weight
+      title: Gain Weight
+    text: Hey which of the following are you interested in ?
+  utter_take_information:
+  - buttons:
+    - payload: Male
+      title: Male
+    - payload: Female
+      title: Female
+    text: Buddy!! It would be great if You Specify your gender
+  utter_ask_details:
+  - text: Please leave Your details , we will soon contact you.Enter your Name and
+      Phone Number is a single line
+  utter_display_chart:
+  - text: "Healthy Diet Chart for Weight Loss---\nUpon waking up: 1-2 glasses lukewarm\
+      \ water + lime juice\nBreakfast: 1 bowl oats upma OR boiled egg with toast\n\
+      Mid-morning: 1 fruit (any)\nLunch: 2 whole wheat/multigrain rotis + 1 bowl vegetable\
+      \ + 1 bowl curd\nEvening snack: Green tea + roasted chana/ fruit\nDinner: 2\
+      \ besan chilla/tomato omelette or grilled chicken or fish + 1 bowl vegetable\
+      \ + 1 bowl salad"
+  utter_more_details:
+  - text: Hey, i hope you like it.Do you want to know about us more?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye, Stay fit , Take care!!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_display_ptprice:
+  - text: Price for Personal Trainer is 7000 rupess per month
+actions:
+- utter_greet
+- utter_display_plan
+- utter_display_chart
+- lwe_exercise_chart
+- utter_goodbye
+- gwe_exercise_chart
+- bme_exercise_chart
+- utter_display_ptprice
+- utter_more_details
+- utter_ask_details
+- utter_take_information
+- details_received
